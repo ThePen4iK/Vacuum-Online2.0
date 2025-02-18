@@ -15,8 +15,8 @@ export default defineConfig({
         '/assets/favicons/apple-touch-icon.png',
         '/assets/favicons/512x512.png',
       ],
-      // filename: 'service-worker.js',
-      // strategies: 'injectManifest', // Используем injectManifest для кастомного Service Worker
+      filename: 'service-worker.js',
+      strategies: 'injectManifest', // Используем injectManifest для кастомного Service Worker
       injectRegister: false,
       pwaAssets: {
         disabled: false,
@@ -62,7 +62,7 @@ export default defineConfig({
         skipWaiting: true,
       },
       devOptions: {
-        enabled: true, // Отключает SW в режиме разработки
+        enabled: false, // Отключает SW в режиме разработки
         navigateFallback: 'index.html', // Этот параметр определяет файл, который должен использоваться как резервный вариант при навигации, если запрашиваемый ресурс не найден. Чаще всего используется для поддержки режима SPA (Single Page Application), где все несуществующие пути перенаправляются на index.html.
         suppressWarnings: true, // Подавляет предупреждения, связанные с PWA или Service Worker-ом, в консоли во время разработки. Это может быть полезно для уменьшения шума в логах.
         type: 'module', // Указывает, что Service Worker должен использоваться как ES-модуль. Это полезно для использования современных JavaScript-функций и импорта/экспорта модулей непосредственно внутри
