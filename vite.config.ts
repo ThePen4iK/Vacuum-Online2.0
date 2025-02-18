@@ -75,6 +75,6 @@ export default defineConfig({
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
   server: {
-    port: 8080,
+    port: 3000,
   },
 })
