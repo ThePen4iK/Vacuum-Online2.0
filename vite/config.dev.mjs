@@ -11,10 +11,12 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        '/favicons/192x192.png',
-        '/favicons/apple-touch-icon.png',
-        '/favicons/512x512.png',
+        '/assets/favicons/192x192.png',
+        '/assets/favicons/apple-touch-icon.png',
+        '/assets/favicons/512x512.png',
       ],
+      // filename: 'service-worker.js',
+      // strategies: 'injectManifest', // Используем injectManifest для кастомного Service Worker
       injectRegister: false,
       pwaAssets: {
         disabled: false,
@@ -30,23 +32,23 @@ export default defineConfig({
         orientation: 'landscape-primary',
         icons: [
           {
-            src: '/favicons/192x192.png',
+            src: '/assets/favicons/192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/favicons/512x512.png',
+            src: '/assets/favicons/512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/favicons/512x512.png',
+            src: '/assets/favicons/512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/favicons/512x512.png',
+            src: '/assets/favicons/512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',

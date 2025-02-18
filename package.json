@@ -2,6 +2,7 @@
     "name": "vacuum-online2.0",
     "version": "1.0.3",
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "node log.js dev & vite --config vite/config.dev.mjs",
         "build": "node log.js build & vite build --config vite/config.prod.mjs",
